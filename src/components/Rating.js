@@ -4,7 +4,7 @@ function Rating({ratingValue}) {
 
   return (
   <div className="rating">
-    <div className='rating__value'>{ratingValue}</div>
+    {/* <div className='rating__value'>{ratingValue}</div> */}
     <div className="rating__body">
       <div className="rating__active" style={{width: `${ratingValue * 20}%`}}></div>
       <div className="rating__items">
