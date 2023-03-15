@@ -20,7 +20,7 @@ function Courses() {
 
   return (
     <div className="courses">
-      <h1 className="courses__title">Explore More</h1>
+      <h1 className="courses__title">Courses</h1>
       <div className="courses__cards">
         {coursesWithPag.map(course => <CoursePreview course={course} key={course.id}/>)}
       </div>

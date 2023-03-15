@@ -1,0 +1,16 @@
+.lesson {
+  position: relative;
+}
+
+.lesson__img {
+  max-width: 100px;
+}
+
+.overlay {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100px;
+  background-color: #000000; */
+}
