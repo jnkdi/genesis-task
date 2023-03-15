@@ -20,10 +20,11 @@ function Courses() {
 
   return (
     <div className="courses">
+      <h1 className="courses__title">Explore More</h1>
       <div className="courses__cards">
         {coursesWithPag.map(course => <CoursePreview course={course} key={course.id}/>)}
       </div>
-      <button onClick={loadMore} className="load-button">Load more</button>
+      <a onClick={loadMore} className="courses__load-button">Load more</a>
     </div>);
 }
 

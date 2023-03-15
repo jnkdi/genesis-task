@@ -14,16 +14,16 @@ function CoursePreview({course}) {
   }
   
   const {title, description, meta, lessonsCount, rating, tags} = course;
-  console.log(course);
   return (
     <article onClick={routeChange} className="course-preview__card">
-      {meta.courseVideoPreview&&
-      (<div className="course-preview__header">
+      <div className="course-preview__header">
         <a className="course-preview__img">
-          <img src={`https://wisey.app/assets/images/web/course-covers/${meta.slug}/cover.webp`}></img>
+          {meta.courseVideoPreview&&
+            (<img src={`https://wisey.app/assets/images/web/course-covers/${meta.slug}/cover.webp`}></img>)
+          }
         </a>
         <p className="course-preview__lessons">{lessonsCount} lessons</p>
-      </div>)}
+      </div>
       <div className="course-preview__content">
         <div className="course-preview__text">
           <h2 className="course-preview__title">{title}</h2>
