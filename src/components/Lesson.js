@@ -1,15 +1,23 @@
-import '../css/Lesson.css'
+import { useState } from "react";
+import "../css/Lesson.css";
 
-function Lesson({lesson, setVideoURL}) {
-  console.log(lesson.previewImageLink);
-  console.log(lesson.order);
-  return(
-    <div onClick={() => setVideoURL()} className="lesson">
-      <img className="lesson__img" src={`${lesson.previewImageLink}/lesson-${lesson.order}.webp`}/>
-      <div className='overlay'></div>
-      <h3>{lesson.title}</h3>
+function Lesson({ lesson, setVideoURL, setTitle, setLessonNumber, className, setLessonStatus, setLessonPreview}) {
+  function pickLesson() {
+    setLessonStatus(lesson.status)
+    setVideoURL(lesson.link);
+    setLessonNumber(lesson.order);
+    setLessonPreview(lesson.previewImageLink);
+    setTitle(() => lesson.title);
+  }
+  return (
+    <div onClick={pickLesson} className={className}>
+      <div className="lesson__preview"/>
+      <div className="lesson__description">
+        <h3 className="lesson__title">{lesson.title}</h3>
+        <div className="lesson__duration">0{Math.floor(lesson.duration / 60)}:{lesson.duration % 60} min</div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Lesson;
