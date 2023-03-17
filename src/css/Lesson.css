@@ -26,7 +26,8 @@
 }
 
 .lesson__preview {
-  width:48px;
+  /* flex: 1 1 48px; */
+  min-width:48px;
   height: 48px;
   border-radius: 8px;
   margin-right: 12px;
@@ -37,9 +38,8 @@
   background-position: center;
 }
 
-.lesson__img {
-  width: 48px;
-  height: 48px;
+.lesson__description {
+  flex-wrap: wrap;
 }
 
 .lesson__title {

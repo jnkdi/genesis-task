@@ -33,7 +33,7 @@ function CoursePreview({ course }) {
         </div>
         <div className="course-preview__tags">
           <p className="course-preview__label">{tags[0]}</p>
-          <div form-item>
+          <div className='form-item'>
             <Rating ratingValue={rating} />
           </div>
         </div>

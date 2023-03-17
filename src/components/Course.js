@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { getCourseRequest } from "../api/api";
 import { useParams } from "react-router";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Hls from "hls.js";
 import ReactPlayer from "react-player";
 import classNames from "classnames";
 import "../css/Course.css";
-import "../css/Lesson.css";
 import Lesson from "./Lesson";
 
 function Course({}) {
@@ -21,18 +21,26 @@ function Course({}) {
 
   useEffect(() => {
     getCourseRequest(courseId).then((response) => setCourse(response));
-  }, []);
+    // const video = this.player;
+    // const hls = new Hls();
+    // const url = "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
 
-  console.log(course);
+    // hls.loadSource(url);
+    // hls.attachMedia(video);
+    // hls.on(Hls.Events.MANIFEST_PARSED, function() { video.play(); });
+  }, []);
 
   if (!course) {
     return <></>;
   }
 
+  console.log(videoURL);
+
   return (
     <div className="course">
       <nav className="course__nav">
         <div className="course-nav__container">
+          <Link to={'/'} className='course__logo'></Link>
           <h3 className="course__nav-title">COURSE NAVIGATION</h3>
           <div className="course__lessons">
             {course.lessons.map((lesson) => (
@@ -68,6 +76,11 @@ function Course({}) {
                 controls={true}
                 muted={true}
               ></ReactPlayer>
+              // <video
+              //   className="videoCanvas"
+              //   ref={player => (this.player = player)}
+              //   autoPlay={true}
+              // />
             )
           ) : (
             <div className="locked" style={{backgroundImage: `url(${lessonPreview}/lesson-${lessonNumber}.webp)`}}>

@@ -2,6 +2,8 @@ import { useState } from "react";
 import "../css/Lesson.css";
 
 function Lesson({ lesson, setVideoURL, setTitle, setLessonNumber, className, setLessonStatus, setLessonPreview}) {
+
+  console.log(lesson.link);
   function pickLesson() {
     setLessonStatus(lesson.status)
     setVideoURL(lesson.link);
