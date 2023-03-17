@@ -58,9 +58,10 @@
   }
 
   .lesson__preview {
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     background-size: 10px;
+    border-radius: 4px;
     margin-right: 5px;
   }
 }

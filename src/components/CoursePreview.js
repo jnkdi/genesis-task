@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { getCourseRequest } from "../api/api";
 import Rating from "./Rating";
 import "../css/CoursePreview.css";
 import { useNavigate } from "react-router-dom";

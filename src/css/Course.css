@@ -158,6 +158,10 @@
   .locked__overlay {
     padding: 25px;
   }
+
+  .course__lessons {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
