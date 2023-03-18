@@ -15,7 +15,7 @@
   background-color: #f6f6f7;
 }
 
-.lesson-locked .lesson__preview{
+.lesson-locked .lesson__preview {
   background-image: url(../img/lock.svg);
 }
 
@@ -26,8 +26,7 @@
 }
 
 .lesson__preview {
-  /* flex: 1 1 48px; */
-  min-width:48px;
+  min-width: 48px;
   height: 48px;
   border-radius: 8px;
   margin-right: 12px;
@@ -67,5 +66,4 @@
 }
 
 @media (max-width: 424px) {
-
 }

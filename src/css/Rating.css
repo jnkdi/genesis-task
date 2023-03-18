@@ -5,13 +5,6 @@
   line-height: 0.75;
 }
 
-/* .rating__value {
-  align-self: center;
-  font-size: 50%;
-  line-height: 1;
-  padding: 0 10px;
-} */
-
 .rating__body {
   position: relative;
 }
@@ -19,7 +12,7 @@
 .rating__body::before {
   content: "★★★★★";
   display: block;
-  color: #D5D7DD;
+  color: #d5d7dd;
 }
 
 .rating__active {

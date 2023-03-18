@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { getCoursesRequest } from "../api/api";
 import CoursePreview from "./CoursePreview";
 import { BeatLoader } from "react-spinners";
@@ -27,33 +28,28 @@ function Courses() {
 
   return (
     <div>
-      {
-        loading ? 
-
+      {loading ? (
         <BeatLoader
           className="loader"
           size={30}
           speedMultiplier={0.8}
-          color={'#ea552b'}
+          color={"#ea552b"}
           loading={loading}
         />
-
-        :
-
+      ) : (
         <div className="courses">
-        <h1 className="courses__title">Courses</h1>
-        <div className="courses__cards">
-          {coursesWithPag.map((course) => (
-            <CoursePreview course={course} key={course.id} />
-          ))}
+          <Link to={"/"} className="logo"></Link>
+          <div className="courses__cards">
+            {coursesWithPag.map((course) => (
+              <CoursePreview course={course} key={course.id} />
+            ))}
+          </div>
+          <a onClick={loadMore} className="courses__load-button">
+            Load more
+          </a>
         </div>
-        <a onClick={loadMore} className="courses__load-button">
-          Load more
-        </a>
-      </div>
-      }
+      )}
     </div>
-
   );
 }
 

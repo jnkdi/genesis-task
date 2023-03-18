@@ -1,12 +1,13 @@
 import Rating from "./Rating";
 import "../css/CoursePreview.css";
 import { useNavigate } from "react-router-dom";
-
 function CoursePreview({ course }) {
   const navigate = useNavigate();
+
   function routeChange() {
     navigate(`/${course.id}`);
   }
+
   if (!course) {
     return <></>;
   }
@@ -31,7 +32,7 @@ function CoursePreview({ course }) {
         </div>
         <div className="course-preview__tags">
           <p className="course-preview__label">{tags[0]}</p>
-          <div className='form-item'>
+          <div className="form-item">
             <Rating ratingValue={rating} />
           </div>
         </div>

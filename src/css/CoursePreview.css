@@ -1,10 +1,9 @@
-/* @import url(./font.css); */
-
 .course-preview__card {
-  font-family:'Rubik';
+  font-family: "Rubik";
   max-width: 365px;
   border-radius: 20px;
-  box-shadow: rgba(24, 39, 75, 0.12) 0px 8px 18px -6px, rgba(24, 39, 75, 0.12) 0px 12px 42px -4px;
+  box-shadow: rgba(24, 39, 75, 0.12) 0px 8px 18px -6px,
+    rgba(24, 39, 75, 0.12) 0px 12px 42px -4px;
   overflow: hidden;
 }
 
@@ -34,7 +33,7 @@
   padding: 4px 15px;
   margin: 0;
   background-color: #ea552b;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 0 0 0 20px;
   font-size: 12px;
 }
@@ -66,13 +65,13 @@
 }
 
 .course-preview__tags::before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
   height: 1px;
   width: 100%;
-  background-color: #D5D7DD;
+  background-color: #d5d7dd;
 }
 
 .course-preview__label {

@@ -1,11 +1,11 @@
 .course {
   display: flex;
-  font-family: 'Rubik';
-  color: #000000DE;
+  font-family: "Rubik";
+  color: #000000de;
 }
 
 .course__nav {
-  background-color: #F6F6F7;
+  background-color: #f6f6f7;
   width: 240px;
   height: 100vh;
 }
@@ -14,7 +14,7 @@
   height: 80%;
 }
 
-.course__logo {
+.logo {
   margin: 20px;
   display: block;
   width: 100px;
@@ -61,7 +61,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-repeat: no-repeat; */
 }
 
 .locked__overlay {
@@ -84,20 +83,19 @@
   background-size: 36px 36px;
   background-position: center;
   background-repeat: no-repeat;
-  /* margin-bottom: 20px; */
 }
 
 .locked__text {
   font-size: 18px;
-  color: #F6F6F7;
+  color: #f6f6f7;
   margin: 0;
   border: none;
   text-align: center;
 }
 
 .locked__button {
-  font-family: 'Rubik';
-  color: #F6F6F7;
+  font-family: "Rubik";
+  color: #f6f6f7;
   background-color: #4c866a;
   border: none;
   padding: 20px 70px;
@@ -163,7 +161,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 
 @media (max-width: 424px) {
   .course-nav__container {

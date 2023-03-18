@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.courses__title {
+.courses .logo {
   align-self: flex-start;
   margin-bottom: 30px;
 }
@@ -35,7 +35,7 @@
 }
 
 .courses__load-button {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-weight: 500;
   font-size: 16px;
   display: flex;
@@ -47,7 +47,7 @@
 }
 
 .courses__load-button::after {
-  content: ' ';
+  content: " ";
   background-image: url(../img/arrow-down.png);
   background-size: 12px;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@
   height: 30px;
   width: 30px;
   margin-left: 8px;
-  border: 1px solid #D5D7DD;
+  border: 1px solid #d5d7dd;
   border-radius: 8px;
 }
 
